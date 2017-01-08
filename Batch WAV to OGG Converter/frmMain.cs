@@ -60,7 +60,7 @@ namespace Batch_WAV_to_OGG_Converter
         {
             process = new Process();
             process.StartInfo.FileName = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName) +
-                                    @"\ffmpeg\bin\ffmpeg.exe";
+                                    @"\ffmpeg\ffmpeg.exe";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.Arguments = "-i " + '"' + filenames[currentFile] + '"' + " -acodec libvorbis -f ogg " + '"' + filenames[currentFile].Substring(0, filenames[currentFile].Length - 4) + ".ogg" + '"';
